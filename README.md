@@ -25,7 +25,7 @@ $ npm install make-license
 
 ## Useage
 ```
-$ make-file
+$ make-license
 
 [?] Choose a License (Use arrow keys)
 ❯ MIT
