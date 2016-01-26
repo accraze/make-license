@@ -1,6 +1,5 @@
 {
   "name": "make-license",
-  "version": "0.1.0",
   "description": "generate a LICENSE for your open source project",
   "main": "src/index.js",
   "scripts": {
@@ -30,7 +29,7 @@
     "codecov.io": "0.1.6",
     "ghooks": "1.0.3",
     "istanbul": "0.4.2",
-    "semantic-release": "4.3.5"
+    "semantic-release": "^4.3.5"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
