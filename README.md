@@ -15,7 +15,7 @@ NodeJS CLI that generates a LICENSE file for your open source projects.
 * UNLICENSE
 * NO LICENSE/COPYRIGHT ONLY
 
-More licenses will be added soon.
+More licenses will be added soon...
 
 ## Install
 
@@ -26,7 +26,8 @@ $ npm install make-license
 ## Useage
 ```
 $ make-file
-? Choose a License (Use arrow keys)
+
+[?] Choose a License (Use arrow keys)
 ❯ MIT
   ISC
   UNLICENSE
@@ -35,4 +36,4 @@ $ make-file
 ```
 
 ## License:
-[MIT](https://github.com/accraze/machine-translator/blob/master/LICENSE) License 2016 © Andy Craze
+[MIT](https://github.com/accraze/make-license/blob/master/LICENSE) License 2016 © Andy Craze
