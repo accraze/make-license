@@ -34,6 +34,7 @@ $ make-file
   NO LICENSE
 ...
 ```
+You will now have a **LICENSE** file generated in your current working directory.
 
 ## License:
 [MIT](https://github.com/accraze/make-license/blob/master/LICENSE) License 2016 © Andy Craze
