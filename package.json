@@ -43,6 +43,14 @@
   "bin": {
     "make-license": "src/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/accraze/make-license.git"
+  },
+  "bugs": {
+    "url": "https://github.com/accraze/make-license/issues"
+  },
+  "homepage": "https://github.com/accraze/make-license",
   "author": "accraze",
   "license": "MIT",
   "dependencies": {
