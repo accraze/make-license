@@ -25,7 +25,7 @@
     "commitizen": "2.5.0",
     "chai": "3.4.1",
     "cz-conventional-changelog": "1.1.5",
-    "mocha": "2.4.2",
+    "mocha": "2.4.5",
     "codecov.io": "0.1.6",
     "ghooks": "1.0.3",
     "istanbul": "0.4.2",
