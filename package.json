@@ -53,6 +53,6 @@
   "author": "accraze",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^0.11.3"
+    "inquirer": "^0.12.0"
   }
 }
