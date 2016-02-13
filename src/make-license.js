@@ -4,7 +4,6 @@ var inquirer = require("inquirer");
 module.exports = makeLicense
 
 function makeLicense (args) {
-  console.log(args.license)
   if (args.license === 'MIT') {
     var questions = copyrightQuestions();
     inquirer.prompt(questions, function(answers){
@@ -22,7 +21,6 @@ function makeLicense (args) {
         license += isc;
         print(license);
     });
-
   }
   else if (args.license === 'NO LICENSE'){
     var questions = copyrightQuestions();
@@ -31,10 +29,14 @@ function makeLicense (args) {
         license += answers.years + ", " + answers.name;
         print(license);
     });
-
   }
   else if (args.license === 'UNLICENSE') {
-    print(unlicense);
+    var questions = unlicenseQuestions();
+    var filename=''
+      inquirer.prompt(questions, function(answers){
+        filename = answers.filename;
+        print(unlicense, filename);
+      })
   }
   else{
     throw Error('License Not Found');
@@ -58,8 +60,23 @@ function copyrightQuestions() {
     return questions;
 }
 
-function print(license) {
-    var stream = fs.createWriteStream("LICENSE");
+function unlicenseQuestions() {
+   var questions = [
+      {
+        type: "input",
+        name: "filename",
+        message: "File name",
+        default: "UNLICENSE"
+      }
+    ];
+    return questions;
+}
+
+function print(license, filename) {
+    if (!filename) {
+      var filename = "LICENSE";
+    }
+    var stream = fs.createWriteStream(filename);
     stream.once('open', function(fd) {
       stream.write(license);
       stream.end();
