@@ -40,7 +40,7 @@
     }
   },
   "bin": {
-    "make-license": "src/index.js"
+    "make-license": "src/index.sh"
   },
   "repository": {
     "type": "git",
