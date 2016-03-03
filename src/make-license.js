@@ -2,6 +2,7 @@ var fs = require('fs');
 var inquirer = require("inquirer");
 var mit = require("./licenses/mit")
 var isc = require("./licenses/isc")
+var bsd3 = require("./licenses/bsd3")
 var unlicense = require("./licenses/unlicense")
 
 module.exports = makeLicense
@@ -23,6 +24,15 @@ function makeLicense (args) {
         var license = "Copyright (c) "
         license += answers.years + ", " + answers.name;
         license += isc;
+        print(license);
+    });
+  }
+  else if (args.license === 'BSD 3'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions, function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += bsd3;
         print(license);
     });
   }
