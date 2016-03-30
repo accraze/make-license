@@ -25,7 +25,7 @@
     "project"
   ],
   "devDependencies": {
-    "commitizen": "2.7.3",
+    "commitizen": "2.7.4",
     "chai": "3.5.0",
     "cz-conventional-changelog": "1.1.5",
     "mocha": "2.4.5",
