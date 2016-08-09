@@ -12,6 +12,7 @@ NodeJS CLI that generates a LICENSE file for your open source projects.
 
 * MIT
 * ISC
+* BSD 3
 * UNLICENSE
 * NO LICENSE/COPYRIGHT ONLY
 
