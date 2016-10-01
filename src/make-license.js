@@ -1,10 +1,12 @@
 var fs = require('fs');
 var inquirer = require("inquirer");
-var mit = require("./licenses/mit")
-var isc = require("./licenses/isc")
-var bsd3 = require("./licenses/bsd3")
-var apache2 = require("./licenses/apache2")
-var unlicense = require("./licenses/unlicense")
+var mit = require("./licenses/mit");
+var isc = require("./licenses/isc");
+var bsd3 = require("./licenses/bsd3");
+var apache2 = require("./licenses/apache2");
+var bsd3 = require("./licenses/gpl2");
+var bsd3 = require("./licenses/gpl3");
+var unlicense = require("./licenses/unlicense");
 
 module.exports = makeLicense
 
@@ -52,6 +54,24 @@ function makeLicense (args) {
         var license = "Copyright (c) "
         license += answers.years + ", " + answers.name;
         license += apache2;
+        print(license);
+    });
+  }
+  else if (args.license === 'GPL 2'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions).then(function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += gpl2;
+        print(license);
+    });
+  }
+  else if (args.license === 'GPL 3'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions).then(function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += gpl3;
         print(license);
     });
   }
