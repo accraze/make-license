@@ -44,7 +44,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run test:single"
+      "pre-commit": "npm run build; npm run test:single"
     }
   },
   "bin": {
