@@ -27,6 +27,15 @@ function makeLicense (args) {
         print(license);
     });
   }
+  else if (args.license === 'BSD 2'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions, function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += bsd2;
+        print(license);
+    });
+  }
   else if (args.license === 'BSD 3'){
     var questions = copyrightQuestions();
       inquirer.prompt(questions, function(answers){
