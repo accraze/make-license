@@ -48,7 +48,7 @@ function makeLicense (args) {
   }
   else if (args.license === 'Apache 2.0'){
     var questions = copyrightQuestions();
-      inquirer.prompt(questions, function(answers){
+      inquirer.prompt(questions).then(function(answers){
         var license = "Copyright (c) "
         license += answers.years + ", " + answers.name;
         license += apache2;
