@@ -15,6 +15,6 @@ var questions = [
   }
 ];
 
-inquirer.prompt(questions, function( answers ) {
+inquirer.prompt(questions).then(function(answers) {
   makeLicense(answers);
 });
