@@ -1,4 +1,4 @@
-var bsd2 = "All rights reserved.\n\n"+
+var bsd2 = "\nAll rights reserved.\n\n"+
 "Redistribution and use in source and binary forms, with or without\n" +
 "modification, are permitted provided that the following conditions are met:\n\n" +
 "1. Redistributions of source code must retain the above copyright notice,\n" +
