@@ -60,7 +60,7 @@ function makeLicense (args) {
     var questions = copyrightQuestions();
       inquirer.prompt(questions).then(function(answers){
         var license = "Copyright (c) "
-        license += answers.years + ", " + answers.name;
+        license += answers.years + ", " + answers.name + '\n';
         print(license);
     });
   }
