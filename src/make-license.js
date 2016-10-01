@@ -3,6 +3,7 @@ var inquirer = require("inquirer");
 var mit = require("./licenses/mit")
 var isc = require("./licenses/isc")
 var bsd3 = require("./licenses/bsd3")
+var apache2 = require("./licenses/apache2")
 var unlicense = require("./licenses/unlicense")
 
 module.exports = makeLicense
@@ -42,6 +43,15 @@ function makeLicense (args) {
         var license = "Copyright (c) "
         license += answers.years + ", " + answers.name;
         license += bsd3;
+        print(license);
+    });
+  }
+  else if (args.license === 'Apache 2.0'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions, function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += apache2;
         print(license);
     });
   }
