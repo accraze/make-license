@@ -48,7 +48,15 @@ function makeLicense (args) {
         print(license);
     });
   }
-<<<<<<< HEAD
+  else if (args.license === 'Apache 2.0'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions, function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += apache2;
+        print(license);
+    });
+  }
   else if (args.license === 'GPL 2'){
     var questions = copyrightQuestions();
       inquirer.prompt(questions).then(function(answers){
@@ -63,15 +71,7 @@ function makeLicense (args) {
       inquirer.prompt(questions).then(function(answers){
         var license = "Copyright (c) "
         license += answers.years + ", " + answers.name;
-        license += gpl2;
-=======
-  else if (args.license === 'Apache 2.0'){
-    var questions = copyrightQuestions();
-      inquirer.prompt(questions, function(answers){
-        var license = "Copyright (c) "
-        license += answers.years + ", " + answers.name;
-        license += apache2;
->>>>>>> upstream/master
+        license += gpl3;
         print(license);
     });
   }
