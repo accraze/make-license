@@ -24,7 +24,7 @@ More licenses will be added soon...
 $ npm install make-license
 ```
 
-## Useage
+## Usage
 ```
 $ make-license
 
