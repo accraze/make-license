@@ -1,10 +1,11 @@
 var fs = require('fs');
 var inquirer = require("inquirer");
-var mit = require("./licenses/mit")
-var isc = require("./licenses/isc")
-var bsd3 = require("./licenses/bsd3")
-var apache2 = require("./licenses/apache2")
-var unlicense = require("./licenses/unlicense")
+var mit = require("./licenses/mit");
+var isc = require("./licenses/isc");
+var bsd2 = require("./licenses/bsd2");
+var bsd3 = require("./licenses/bsd3");
+var apache2 = require("./licenses/apache2");
+var unlicense = require("./licenses/unlicense");
 
 module.exports = makeLicense
 
