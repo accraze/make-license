@@ -7,6 +7,7 @@
 # make-license
 
 NodeJS CLI that generates a LICENSE file for your open source projects.
+![demo](demo.gif)
 
 ## Licenses:
 

@@ -4,6 +4,7 @@ import mit from "./licenses/mit";
 import isc from "./licenses/isc";
 import bsd2 from "./licenses/bsd2";
 import bsd3 from "./licenses/bsd3";
+import apache2  from "./licenses/apache2";
 import gpl3 from "./licenses/gpl3";
 import unlicense from "./licenses/unlicense";
 
@@ -48,11 +49,20 @@ export default function makeLicense (args) {
   else if (args.license === 'GPL-3.0'){
     print(gpl3);
   }
+  else if (args.license === 'Apache 2.0'){
+    var questions = copyrightQuestions();
+      inquirer.prompt(questions).then(function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name;
+        license += apache2;
+        print(license);
+    });
+  }
   else if (args.license === 'NO LICENSE'){
     var questions = copyrightQuestions();
-      inquirer.prompt(questions).then(answers => {
-        let license = "Copyright (c) ";
-        license += `${answers.years}, ${answers.name}`;
+      inquirer.prompt(questions).then(function(answers){
+        var license = "Copyright (c) "
+        license += answers.years + ", " + answers.name + '\n';
         print(license);
     });
   }

@@ -6,7 +6,7 @@
     "src"
   ],
   "scripts": {
-    "test": "mocha test/index.test.js -w ",
+    "test": "mocha tests/index.test.js -w ",
     "test:single": "istanbul cover -x *.test.js,src/index.js _mocha tests/index.test.js",
     "postbuild": "cp src/index.sh dist",
     "build": "babel src --out-dir dist",
