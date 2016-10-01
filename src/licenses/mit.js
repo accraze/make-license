@@ -1,5 +1,4 @@
-
-var mit = "\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\n"+
+const mit = "\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\n"+
 "of this software and associated documentation files (the \"Software\"), to deal\n"+
 "in the Software without restriction, including without limitation the rights\n"+
 "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n"+
@@ -17,4 +16,4 @@ var mit = "\n\nPermission is hereby granted, free of charge, to any person obtai
 "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n"+
 "SOFTWARE.";
 
-module.exports = mit;
+export default mit;

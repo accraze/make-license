@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-var makeLicense = require('../src/make-license.js')
+var makeLicense = require('../dist/make-license.js')
 
 describe('makeLicense', function () {
   it('should raise error when no match for license', function (done) {
