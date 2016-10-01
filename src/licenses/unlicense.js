@@ -22,6 +22,6 @@ var unlicense = "This is free and unencumbered software released into the public
     "ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR\n"+
     "OTHER DEALINGS IN THE SOFTWARE.\n"+
 "\n"+
-    "For more information, please refer to <http://unlicense.org>";
+    "For more information, please refer to <http://unlicense.org>\n";
 
 module.exports = unlicense;
