@@ -11,7 +11,7 @@ var questions = [
     type: "list",
     name: "license",
     message: "Choose a License",
-    choices: [ "MIT", "ISC", "BSD 2", "BSD 3", "UNLICENSE", "NO LICENSE" ]
+    choices: [ "MIT", "ISC", "BSD 2", "BSD 3", "GPL 2", "GPL 3", "UNLICENSE", "NO LICENSE" ]
   }
 ];
 
