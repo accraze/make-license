@@ -1,4 +1,4 @@
-var bsd2 = "\nAll rights reserved.\n\n"+
+const bsd2 = "All rights reserved.\n\n"+
 "Redistribution and use in source and binary forms, with or without\n" +
 "modification, are permitted provided that the following conditions are met:\n\n" +
 "1. Redistributions of source code must retain the above copyright notice,\n" +
@@ -17,4 +17,4 @@ var bsd2 = "\nAll rights reserved.\n\n"+
 "IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n" +
 "OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n";
 
-module.exports = bsd2;
+export default bsd2;

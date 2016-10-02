@@ -1,5 +1,4 @@
-
-var isc = " \n\n"+
+const isc = " \n\n"+
 "Permission to use, copy, modify, and/or distribute this software for any\n"+
 "purpose with or without fee is hereby granted, provided that the above\n"+
 "copyright notice and this permission notice appear in all copies.\n"+
@@ -12,4 +11,4 @@ var isc = " \n\n"+
 "ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF\n"+
 "OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n";
 
-module.exports = isc;
+export default isc;

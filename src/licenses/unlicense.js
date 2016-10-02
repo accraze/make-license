@@ -1,5 +1,4 @@
-
-var unlicense = "This is free and unencumbered software released into the public domain.\n"+
+const unlicense = "This is free and unencumbered software released into the public domain.\n"+
 "\n"+
     "Anyone is free to copy, modify, publish, use, compile, sell, or\n"+
     "distribute this software, either in source code form or as a compiled\n"+
@@ -24,4 +23,5 @@ var unlicense = "This is free and unencumbered software released into the public
 "\n"+
     "For more information, please refer to <http://unlicense.org>\n";
 
-module.exports = unlicense;
+export default unlicense;
+
