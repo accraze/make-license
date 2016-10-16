@@ -2,20 +2,22 @@ var expect = require('chai').expect
 var proxyquire = require('proxyquire');
 
 describe('makeLicense', function () {
-  var makeLicense; 
+  var makeLicense;
   var result;
   var stub = {
     'inquirer' :{
       prompt: function() {
         return new Promise(function(resolve, reject) {
-          
-          return resolve({years: 'foo',name: 'bar'});
+
+          return resolve({years: 'foo', name: 'bar'});
         });
       },
-     
+
     },
-    './print': function(license) {} 
+    './print': function(license) {}
   };
+
+
   it('should raise error when no match for license', function (done) {
     var args = {license: 'blahblahblah'};
     makeLicense = proxyquire('../dist/make-license.js', stub).default
@@ -27,31 +29,40 @@ describe('makeLicense', function () {
     expect(makeLicense).to.exist;
     done();
   });
+
   const tests = [
     {
-      license: "MIT",
+      license: 'MIT',
       text: 'Permission is hereby granted, free of charge, to any person obtaining a copy'
     },
     {
-      license: "ISC",
+      license: 'ISC',
       text: 'Permission to use, copy, modify, and/or distribute this software for any'
     },
     {
-      license: "BSD 2",
+      license: 'BSD 2',
       text: 'Redistribution and use in source and binary forms, with or without'
     },
     {
-      license: "BSD 3",
+      license: 'BSD 3',
       text: 'this software without specific prior written permission.'
     },
     {
-      license: "Apache 2.0",
+      license: 'Apache 2.0',
       text: 'Licensed under the Apache License'
     },
     {
-      license: "GPL-3.0",
+      license: 'GPL-3.0',
       text: 'GNU GENERAL PUBLIC LICENSE'
     },
+    {
+      license: 'NO LICENSE',
+      text: 'Copyright (c) foo, bar\n'
+    },
+    {
+      license: 'UNLICENSE',
+      text: 'This is free and unencumbered software released into the public domain.'
+    }
   ].forEach(function(test) {
     it('should print license when given license name: ' + test.license, function(done) {
       var args = {license: test.license};
@@ -63,5 +74,5 @@ describe('makeLicense', function () {
       expect(makeLicense.bind(makeLicense, args)).not.to.throw(Error);
     })
   })
-  
+
 });
