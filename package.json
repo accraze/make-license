@@ -6,8 +6,8 @@
     "src"
   ],
   "scripts": {
-    "test": "mocha tests/index.test.js -w ",
-    "test:single": "istanbul cover -x *.test.js,src/index.js _mocha tests/index.test.js",
+    "test": "npm run build && mocha tests/index.test.js -w ",
+    "test:single": "npm run build && istanbul cover -x *.test.js,src/index.js _mocha tests/index.test.js",
     "postbuild": "cp src/index.sh dist",
     "build": "babel src --out-dir dist",
     "build:watch": "babel src --out-dir dist --watch",
@@ -45,7 +45,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run build; npm run test:single"
+      "pre-commit": "npm run test:single"
     }
   },
   "bin": {
