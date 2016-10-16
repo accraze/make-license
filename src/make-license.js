@@ -10,8 +10,7 @@ import print from './print';
 
 export default function makeLicense(args) {
   if (args.license === 'MIT') {
-    var questions = copyrightQuestions();
-    inquirer.prompt(questions).then(answers => {
+    inquirer.prompt(copyrightQuestions).then(answers => {
       let license = "The MIT License (MIT)\n\n";
       license += `Copyright (c) ${answers.years} ${answers.name}`;
       license += mit;
@@ -19,8 +18,7 @@ export default function makeLicense(args) {
     });
   }
   else if (args.license === 'ISC') {
-    var questions = copyrightQuestions();
-    inquirer.prompt(questions).then(answers => {
+    inquirer.prompt(copyrightQuestions).then(answers => {
       let license = "Copyright (c) ";
       license += `${answers.years}, ${answers.name}`;
       license += isc;
@@ -28,8 +26,7 @@ export default function makeLicense(args) {
     });
   }
   else if (args.license === 'BSD 2') {
-    var questions = copyrightQuestions();
-    inquirer.prompt(questions).then(answers => {
+    inquirer.prompt(copyrightQuestions).then(answers => {
       let license = "Copyright (c) ";
       license += `${answers.years}, ${answers.name}`;
       license += bsd2;
@@ -37,8 +34,7 @@ export default function makeLicense(args) {
     });
   }
   else if (args.license === 'BSD 3') {
-    var questions = copyrightQuestions();
-    inquirer.prompt(questions).then(answers => {
+    inquirer.prompt(copyrightQuestions).then(answers => {
       let license = "Copyright (c) ";
       license += `${answers.years}, ${answers.name}`;
       license += bsd3;
@@ -49,8 +45,7 @@ export default function makeLicense(args) {
     print(gpl3);
   }
   else if (args.license === 'Apache 2.0') {
-    var questions = copyrightQuestions();
-    inquirer.prompt(questions).then(function (answers) {
+    inquirer.prompt(copyrightQuestions).then(function (answers) {
       var license = "Copyright (c) "
       license += answers.years + ", " + answers.name;
       license += apache2;
@@ -58,17 +53,15 @@ export default function makeLicense(args) {
     });
   }
   else if (args.license === 'NO LICENSE') {
-    var questions = copyrightQuestions();
-    inquirer.prompt(questions).then(function (answers) {
+    inquirer.prompt(copyrightQuestions).then(function (answers) {
       var license = "Copyright (c) "
       license += answers.years + ", " + answers.name + '\n';
       print(license);
     });
   }
   else if (args.license === 'UNLICENSE') {
-    var questions = unlicenseQuestions();
     let filename = '';
-    inquirer.prompt(questions).then(answers => {
+    inquirer.prompt(unlicenseQuestions).then(answers => {
       filename = answers.filename;
       print(unlicense, filename);
     })
@@ -78,34 +71,24 @@ export default function makeLicense(args) {
   }
 }
 
-function copyrightQuestions() {
-  const questions = [
-    {
-      type: "input",
-      name: "name",
-      message: "Full Name"
-    },
-    {
-      type: "input",
-      name: "years",
-      message: "Year(s)"
-    }
-  ];
+const copyrightQuestions = [
+  {
+    type: "input",
+    name: "name",
+    message: "Full Name"
+  },
+  {
+    type: "input",
+    name: "years",
+    message: "Year(s)"
+  }
+];
 
-  return questions;
-}
-
-function unlicenseQuestions() {
-  const questions = [
-    {
-      type: "input",
-      name: "filename",
-      message: "File name",
-      default: "UNLICENSE"
-    }
-  ];
-  return questions;
-}
-
-
-
+const unlicenseQuestions = [
+  {
+    type: "input",
+    name: "filename",
+    message: "File name",
+    default: "UNLICENSE"
+  }
+];
