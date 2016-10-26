@@ -7,10 +7,11 @@
 
 # make-license
 
-NodeJS CLI that generates a LICENSE file for your open source projects.
 ![demo](demo.gif)
 
-## Licenses:
+NodeJS CLI that generates a LICENSE file for your open source projects.
+
+## Supported Licenses:
 
 * MIT
 * ISC
@@ -19,8 +20,6 @@ NodeJS CLI that generates a LICENSE file for your open source projects.
 * GPL-3.0
 * UNLICENSE
 * NO LICENSE/COPYRIGHT ONLY
-
-More licenses will be added soon...
 
 ## Install
 
@@ -42,4 +41,4 @@ $ make-license
 You will now have a **LICENSE** file generated in your current working directory.
 
 ## License:
-[MIT](https://github.com/accraze/make-license/blob/master/LICENSE) License 2016 © Andy Craze
+[MIT](https://github.com/accraze/make-license/blob/master/LICENSE) License 2016 © Andy Craze & contributors
