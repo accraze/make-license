@@ -41,4 +41,4 @@ $ make-license
 You will now have a **LICENSE** file generated in your current working directory.
 
 ## License:
-[MIT](https://github.com/accraze/make-license/blob/master/LICENSE) License 2016 © Andy Craze & contributors
+[MIT](https://github.com/accraze/make-license/blob/master/LICENSE) License 2016-2020 © Andy Craze & contributors
