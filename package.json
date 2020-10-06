@@ -39,7 +39,7 @@
     "istanbul": "0.4.5",
     "mocha": "3.4.2",
     "proxyquire": "^1.7.10",
-    "semantic-release": "^6.3.2"
+    "semantic-release": "^6.3.6"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
